@@ -1,8 +1,11 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom'
 import Home from "../views/Home";
-import Contact from "../views/Contact"
 import ContactUs from "../views/ContactUs";
+import Policy from "../views/Policy";
+import NotFound from "../views/NotFound";
+import EarlyAccess from "../views/EarlyAccess";
+
 
 function Router() {
 
@@ -10,8 +13,10 @@ function Router() {
       
         <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/contact" element={<Contact/>} />
             <Route path="/contactUs" element={<ContactUs/>} />
+            <Route path="/earlyAccess" element={<EarlyAccess/>} />
+            <Route path="/policy" element={<Policy/>} />
+            <Route path="*" element={<NotFound/>} />
         </Routes>
       
     );

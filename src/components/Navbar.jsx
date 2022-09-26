@@ -7,11 +7,12 @@ function Navbar() {
 
   return (
     
-    <div className="border-b border-orange-500">
+    <div className="border-b border-gray-500">
       <div className="max-w-6xl mx-auto px-5 py-3 lg:px-0 lg:flex">
         <div className="flex justify-between items-center">
           <div className='w-64'>
-            <Link to="/" className="text-orange-500 font-semibold uppercase text-3xl">Lebah Digital</Link>
+            <Link to="/" className="flex items-center text-black font-bold uppercase text-2xl hover:text-orange-400 transition">
+            <img className='w-10 mr-2' src={"./LD1.png"} />Lebah Digital</Link>
           </div>
           <div>
             <button onClick={() => setIsOpen(!isOpen)} className="text-orange-500 block lg:hidden">
@@ -25,8 +26,8 @@ function Navbar() {
         
 
         <div className={`${isOpen ? 'block' : 'hidden'} lg:flex w-full justify-end py-5 lg:py-0`}>
-          <Link to="/contactUs" className="block py-2 px-4 border border-orange-500 text-orange-500 rounded hover:bg-slate-50">Hubungi kami</Link>
-          <a href="#" className="block py-2 px-4 mt-3 lg:mt-0 lg:ml-3 bg-orange-500 text-slate-50 rounded hover:bg-orange-400">Minta Akses Awal</a>
+          <Link to="/contactUs" className="block py-2 px-4 border border-orange-500 text-orange-500 rounded hover:bg-slate-50 transition">Hubungi kami</Link>
+          <Link to="/earlyAccess" className="block py-2 px-4 mt-3 lg:mt-0 lg:ml-3 bg-orange-500 text-slate-50 rounded hover:bg-orange-400 transition">Minta Akses</Link>
         </div>
 
       </div>
